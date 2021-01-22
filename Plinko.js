@@ -1,12 +1,13 @@
 class Plinko{
-    constructor(x, y, radius) {
+    constructor(x, y) {
         var options = {
             'restitution':0.8,
             'friction':1.0,
-            'density':1.0
+            'density':1.0,
+            'isStatic':true
         }
-        this.body = Bodies.circle(x, y,radius, options);
-        this.radius = radius;
+        this.body = Bodies.circle(x, y,10, options);
+        
         World.add(world, this.body);
       }
       display(){
@@ -17,9 +18,9 @@ class Plinko{
         rotate(angle);
 
         noStroke();
-        fill("white");
+        fill("black");
         ellipseMode(RADIUS);
-        ellipse(0,0,this.radius,this.radius);
+        ellipse(0,0,10,10);
         pop();
       }
 }
