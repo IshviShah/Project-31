@@ -18,7 +18,7 @@ class Plinko{
         rotate(angle);
 
         noStroke();
-        fill("black");
+        fill("white");
         ellipseMode(RADIUS);
         ellipse(0,0,10,10);
         pop();
